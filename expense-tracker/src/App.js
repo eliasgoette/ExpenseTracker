@@ -6,7 +6,7 @@ function App() {
     {
       id: 'e1',
       date: new Date(2022, 9, 23),
-      title: 'Diors',
+      title: 'Dior B23 sneaks',
       amount: 999.89
     },
     { 

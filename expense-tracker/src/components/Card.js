@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "./Card.css";
 
 // className and children are reserved for react and required for more generic components
