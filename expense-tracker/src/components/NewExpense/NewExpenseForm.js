@@ -10,6 +10,7 @@ function NewExpenseForm() {
     // const [titleInput, setTitleInput] = useState('No title');
     // const [amountInput, setAmountInput] = useState('0');
     const [userInput, setUserInput] = useState({date: dateNow, title: 'New expense', amount: '0'});
+    console.log(userInput);
 
     return(
         <form>
