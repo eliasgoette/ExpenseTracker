@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./NewExpenseForm.css";
 
-function NewExpenseForm({onSaveExpense}) {
-    const dateMin = new Date('10/16/2001').toLocaleDateString('en-us');
-    const dateNow = new Date().toLocaleDateString('en-us');
+function NewExpenseForm({onSaveExpense, setVisible}) {
+    const dateMin = new Date('10/16/2001');
+    const dateNow = new Date();
     const dateMax = dateNow;
 
     // const [dateInput, setDateInput] = useState(dateNow);
@@ -15,6 +15,7 @@ function NewExpenseForm({onSaveExpense}) {
         e.preventDefault();
         onSaveExpense(userInput);
         setUserInput({date: dateNow, title: 'New expense', amount: '0.00'});
+        setVisible(false);
     }
 
     return(
@@ -28,7 +29,7 @@ function NewExpenseForm({onSaveExpense}) {
                         onChange={
                             (e) => (setUserInput({
                                 ...userInput,
-                                date: e.target.value
+                                date: new Date(e.target.value)
                             }))
                         }
                     />
@@ -60,6 +61,7 @@ function NewExpenseForm({onSaveExpense}) {
                     />
                 </div>
                 <div className="new-expense__actions">
+                    <button type="button" onClick={() => setVisible(false)}>Cancel</button>
                     <button type="submit">Add expense</button>
                 </div>
             </div>
