@@ -14,7 +14,7 @@ function NewExpenseForm({onSaveExpense, setVisible}) {
     const submitEvent = (e) => {
         e.preventDefault();
         onSaveExpense(userInput);
-        setUserInput({date: dateNow, title: 'New expense', amount: '0.00'});
+        setUserInput({date: dateNow, title: 'New expense', amount: parseFloat(0.00)});
         setVisible(false);
     }
 
@@ -55,7 +55,7 @@ function NewExpenseForm({onSaveExpense, setVisible}) {
                         onChange={
                             (e) => (setUserInput({
                                 ...userInput,
-                                amount: e.target.value
+                                amount: parseFloat(e.target.value)
                             }))
                         } 
                     />
