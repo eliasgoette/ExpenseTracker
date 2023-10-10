@@ -17,7 +17,7 @@ const DUMMY_EXPENSES = [
   },
   {
     id: 'e3',
-    date: new Date(2021, 2, 28),
+    date: new Date(2022, 2, 28),
     title: 'Car Insurance',
     amount: 294.67
   },
@@ -26,6 +26,12 @@ const DUMMY_EXPENSES = [
     date: new Date(2021, 5, 12),
     title: 'New Desk (Wooden)',
     amount: 450
+  },
+  {
+    id: 'e5',
+    date: new Date(2022, 10, 15),
+    title: 'Hugo Boss Wool Coat',
+    amount: 610
   }
 ];
 
