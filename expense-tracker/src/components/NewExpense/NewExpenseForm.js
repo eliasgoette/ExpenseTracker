@@ -11,11 +11,18 @@ function NewExpenseForm({onSaveExpense, setVisible}) {
     // const [amountInput, setAmountInput] = useState('0');
     const [userInput, setUserInput] = useState({date: dateNow, title: 'New expense', amount: '0.00'});
 
+    const clearUserInput = () => setUserInput({date: dateNow, title: 'New expense', amount: parseFloat(0.00)});
+
     const submitEvent = (e) => {
         e.preventDefault();
         onSaveExpense(userInput);
-        setUserInput({date: dateNow, title: 'New expense', amount: parseFloat(0.00)});
+        clearUserInput();
         setVisible(false);
+    }
+
+    const cancelEvent = () => {
+        setVisible(false);
+        clearUserInput();
     }
 
     return(
@@ -61,7 +68,7 @@ function NewExpenseForm({onSaveExpense, setVisible}) {
                     />
                 </div>
                 <div className="new-expense__actions">
-                    <button type="button" onClick={() => setVisible(false)}>Cancel</button>
+                    <button type="button" onClick={cancelEvent}>Cancel</button>
                     <button type="submit">Add expense</button>
                 </div>
             </div>
