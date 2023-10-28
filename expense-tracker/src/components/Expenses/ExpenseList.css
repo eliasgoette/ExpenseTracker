@@ -1,0 +1,16 @@
+.expense-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list__fallback {
+    color: white;
+    text-align: center;
+}
+
+.expense-list__net-expenses {
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
