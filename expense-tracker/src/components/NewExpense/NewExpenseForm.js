@@ -31,7 +31,7 @@ function NewExpenseForm({onSaveExpense, setVisible}) {
                 <div className="new-expense__control">
                     <label>Date</label>
                     <input 
-                        type="date" min={dateMin} max={dateMax} 
+                        type="date" min={dateMin.toISOString().split('T')[0]} max={dateMax.toISOString().split('T')[0]} 
                         value={userInput.date.toISOString().split('T')[0]}
                         onChange={
                             (e) => (setUserInput({

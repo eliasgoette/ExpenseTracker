@@ -7,3 +7,10 @@
     color: white;
     text-align: center;
 }
+
+.expense-list__net-expenses {
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}

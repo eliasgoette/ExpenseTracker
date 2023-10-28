@@ -7,7 +7,8 @@ function ExpenseList({ items }) {
 
     return (
         <ul className="expense-list">
-            {items.map((expense) => (
+            <strong className="expense-list__net-expenses">Net. expenses: ${items.reduce((accumulator, currentItem) => accumulator + currentItem.amount, 0)}</strong>
+            {[...items.sort((a, b) => a.date - b.date)].map((expense) => (
                 <ExpenseItem
                     key={expense.id}
                     date={expense.date}
