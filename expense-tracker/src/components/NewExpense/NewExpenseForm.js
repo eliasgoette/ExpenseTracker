@@ -32,7 +32,7 @@ function NewExpenseForm({onSaveExpense, setVisible}) {
                     <label>Date</label>
                     <input 
                         type="date" min={dateMin} max={dateMax} 
-                        value={userInput.date}
+                        value={userInput.date.toISOString().split('T')[0]}
                         onChange={
                             (e) => (setUserInput({
                                 ...userInput,
