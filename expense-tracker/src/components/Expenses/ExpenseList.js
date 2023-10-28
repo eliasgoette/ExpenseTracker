@@ -8,7 +8,7 @@ function ExpenseList({ items }) {
     return (
         <ul className="expense-list">
             <strong className="expense-list__net-expenses">
-                Net. expenses: ${items.reduce((accumulator, currentItem) => (currentItem.amount >= 0.01) ? accumulator + currentItem.amount : accumulator, 0)}
+                Net. expenses: $ {items.reduce((accumulator, currentItem) => (currentItem.amount >= 0.01) ? accumulator + currentItem.amount : accumulator, 0)}
             </strong>
             {[...items.sort((a, b) => b.date - a.date)].map((expense) => (
                 <ExpenseItem
